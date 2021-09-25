@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+WORKDIR /app
+ADD . /app
+RUN apt update && apt install python -y
+CMD python /app/main.py
+LABEL color=red
