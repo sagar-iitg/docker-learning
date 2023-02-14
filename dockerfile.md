@@ -48,7 +48,7 @@ CMD ["catalina.sh","run"]
 
 ```
 FROM nginx:alpine
-LABEL maintainer="ksagarhit@gmail.com"
+LABEL maintainer="Sagar Kumar"
 COPY index.html /usr/share/nginx/html
 WORKDIR /apps
 
