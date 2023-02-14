@@ -1,3 +1,5 @@
+    ```
+    
     1  clear
     2  sudo apt update
     3  sudo apt install docker.io
@@ -268,3 +270,5 @@
   245  cd
   246  docker images
   247  history
+  
+  ```
