@@ -1,5 +1,0 @@
-FROM nginx:alpine
-LABEL maintainer="ksagarhit@gmail.com"
-COPY index.html /usr/share/nginx/html
-WORKDIR /apps
-
