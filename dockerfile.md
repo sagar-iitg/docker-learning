@@ -54,3 +54,23 @@ WORKDIR /apps
 
 
 ```
+
+
+
+
+```
+FROM alpine
+LABEL maintainer="SK"
+RUN apt update && apt install nginx -y
+WORKDIR /apps
+COPY ./index.html .
+CMD ["service","nginx","start"]
+
+```
+
+
+
+
+
+
+
