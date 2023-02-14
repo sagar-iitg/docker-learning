@@ -1,6 +1,6 @@
-    ```
+
     
-    1  clear
+   ` clear
     2  sudo apt update
     3  sudo apt install docker.io
     4  docker --version
