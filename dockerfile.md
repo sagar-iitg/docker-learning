@@ -1,4 +1,3 @@
-# Example 1
 
 ```
 FROM python:3.9
@@ -9,7 +8,7 @@ EXPOSE 8001
 CMD ["python","manage.py","runserver","0.0.0.0:8001"]
 ```
 
-# Example 2
+
 
 ```
 FROM openjdk:13-jdk-alpine3.10
@@ -20,7 +19,7 @@ ENV CLASSPATH "$CLASSPATH:/app/bin/sk.jar"
 CMD sh
 ```
 
-# Example 3
+
 
 ```
 FROM tomcat:9.0-alpine
@@ -28,5 +27,17 @@ MAINTAINER SAGAR KUMAR
 EXPOSE 8080
 ADD project.war /usr/local/tomcat/webapps
 CMD["catlina.sh","run"]
+
+```
+
+
+```
+FROM tomcat:9.0.71-jre11-temurin-focal
+MAINTAINER SAGAR KUMAR
+EXPOSE 8080
+
+ADD FoodApp.war /usr/local/tomcat/webapps
+
+CMD ["catalina.sh","run"]
 
 ```
