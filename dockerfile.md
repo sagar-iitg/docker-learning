@@ -1,3 +1,5 @@
+## Example
+
 
 ```
 FROM python:3.9
@@ -8,7 +10,7 @@ EXPOSE 8001
 CMD ["python","manage.py","runserver","0.0.0.0:8001"]
 ```
 
-
+## Example
 
 ```
 FROM openjdk:13-jdk-alpine3.10
@@ -19,7 +21,7 @@ ENV CLASSPATH "$CLASSPATH:/app/bin/sk.jar"
 CMD sh
 ```
 
-
+## Example
 
 ```
 FROM tomcat:9.0-alpine
@@ -30,7 +32,7 @@ CMD["catlina.sh","run"]
 
 ```
 
-
+## Example
 ```
 FROM tomcat:9.0.71-jre11-temurin-focal
 MAINTAINER SAGAR KUMAR
@@ -39,5 +41,16 @@ EXPOSE 8080
 ADD FoodApp.war /usr/local/tomcat/webapps
 
 CMD ["catalina.sh","run"]
+
+```
+## Example
+
+
+```
+FROM nginx:alpine
+LABEL maintainer="ksagarhit@gmail.com"
+COPY index.html /usr/share/nginx/html
+WORKDIR /apps
+
 
 ```
