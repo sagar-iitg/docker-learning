@@ -56,7 +56,7 @@ WORKDIR /apps
 ```
 
 
-
+## Example
 
 ```
 FROM alpine
