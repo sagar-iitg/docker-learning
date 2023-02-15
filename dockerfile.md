@@ -69,6 +69,40 @@ CMD ["service","nginx","start"]
 ```
 
 
+## Example
+
+```
+# Base 'image:version'
+
+FROM node:16-alpine3.11
+
+# Expose the utf-server port
+EXPOSE 4000
+
+#install ca-certificates
+
+RUN apk update && apk add --no-cache ca-certificates && update-ca-certificates
+
+# Declare default working directory in container; root folder of 'team-a' mongorepo
+
+
+WORKDIR /app
+
+RUN chown -R node:node services/alpine
+COPY package.json .
+RUN chown -R node:node package.json
+COPY lerna.json
+RUN chown -R node:node lerna.json
+COPY yarn.lock
+RUN chown -R node:node yarn.lock
+RUN yarn install-all
+RUN yarn build-all
+CMD ["yarn", "workspace", "@mern-starter/api","runprod"]
+
+
+
+```
+
 
 
 
