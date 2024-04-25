@@ -17,6 +17,10 @@ Docker Tutorial
 curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" \
     # Save the downloaded binary to /usr/local/bin/docker-compose
     -o /usr/local/bin/docker-compose
+
+
+
+https://github.com/docker/compose/releases?page=11
 ```
 
 
