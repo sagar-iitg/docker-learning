@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  registry:
+    image: registry:2  # Specifies the Docker image to use for the registry service
+    ports:
+      - "5000:5000"  # Exposes port 5000 on the host machine and forwards it to port 5000 in the container
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data  # Sets an environment variable to configure the storage directory
+    volumes:
+      - ./data:/data  # Mounts a volume named 'data' from the host to '/data' in the container for persistent storage
